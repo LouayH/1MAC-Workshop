@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Forums Workshop</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="index, follow" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="../static/style.css">
+	</head>
+	<body>
+        <header>
+            <h1><b>Forums</b> Workshop</h1>
+            <nav>
+                <a href="#">Add Post</a>
+                <a href="http://127.0.0.1:8000/" class="current">My Posts</a>
+                <a href="#">My Profile</a>
+                <a href="#">Members</a>
+            </nav>
+        </header>
+        <main>
+            {% for post in posts %}
+                <article>
+                    <header>
+                        <h2>{{ post.title }}</h2>
+                        <div>
+                            <a href="#">
+                                Edit
+                            </a>
+                            <a href="#">
+                                Delete
+                            </a>
+                        </div>
+                    </header>
+                    <p>
+                        {{ post.content }}
+                    </p>
+                </article>
+            {% endfor %}
+        </main>
+        <footer>
+            1 Million Arab Coders &copy; Udacity
+        </footer>
+	</body>
+</html>
